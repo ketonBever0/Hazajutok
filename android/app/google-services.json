@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "400037099075",
+    "project_id": "hazajutok-e89a9",
+    "storage_bucket": "hazajutok-e89a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400037099075:android:60e3cd5c1ce7fae97b46f6",
+        "android_client_info": {
+          "package_name": "com.example.hazajutok"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf4YhJPQ3jfVKYs8JG3bWMqDFUVXzR8uM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
