@@ -17,9 +17,9 @@ class _WorldMapState extends State<WorldMap> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _getPosition();
-    });
+    // WidgetsBinding.instance.addPostFrameCallback((_) {
+    //   _getPosition();
+    // });
   }
 
   Future<void> _getPosition() async {
@@ -39,7 +39,7 @@ class _WorldMapState extends State<WorldMap> {
     Position position = await Geolocator.getCurrentPosition();
     setState(() {
       _currentPosition = LatLng(position.latitude, position.longitude);
-      _mapController.move(_currentPosition, 30);
+      _mapController.move(_currentPosition, 15);
       // print(_currentPosition);
     });
   }
@@ -60,8 +60,24 @@ class _WorldMapState extends State<WorldMap> {
           urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
           userAgentPackageName: 'dev.fleaflet.flutter_map.example',
         ),
+        MarkerLayer(
+          markers: [
+            Marker(
+              width: 80.0,
+              height: 80.0,
+              point: _currentPosition,
+              child: Container(
+                child: Icon(
+                  Icons.location_on,
+                  color: Colors.red,
+                  size: 40.0,
+                ),
+              ),
+            ),
+          ],
+        ),
         Padding(
-          padding: EdgeInsets.fromLTRB(0, 0, 7, 10),
+          padding: const EdgeInsets.fromLTRB(0, 0, 7, 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -71,8 +87,9 @@ class _WorldMapState extends State<WorldMap> {
                   ElevatedButton(
                       onPressed: _getPosition,
                       style: ElevatedButton.styleFrom(
-                          shape: CircleBorder(), padding: EdgeInsets.all(15)),
-                      child: Icon(Icons.my_location)),
+                          shape: const CircleBorder(),
+                          padding: const EdgeInsets.all(15)),
+                      child: const Icon(Icons.my_location)),
                 ],
               ),
             ],
