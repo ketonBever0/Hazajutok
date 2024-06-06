@@ -98,14 +98,16 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-        body: IndexedStack(
-          index: _pageIndex,
-          children: <Widget>[
-            Home(),
-            WorldMap(),
-            Placeholder(),
-            Placeholder()
-          ],
+        body: SafeArea(
+          child: IndexedStack(
+            index: _pageIndex,
+            children: <Widget>[
+              Home(),
+              WorldMap(),
+              Placeholder(),
+              Placeholder()
+            ],
+          ),
         ));
   }
 }
