@@ -11,10 +11,16 @@ class WorldMap extends StatefulWidget {
 }
 
 class _WorldMapState extends State<WorldMap> {
-
   LatLng _currentPosition = LatLng(0, 0);
-  final MapController _mapController = new MapController(); 
+  final MapController _mapController = new MapController();
 
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _getPosition();
+    });
+  }
 
   Future<void> _getPosition() async {
     LocationPermission permission;
@@ -34,15 +40,14 @@ class _WorldMapState extends State<WorldMap> {
     setState(() {
       _currentPosition = LatLng(position.latitude, position.longitude);
       _mapController.move(_currentPosition, 30);
+      // print(_currentPosition);
     });
-
   }
-
 
   @override
   Widget build(BuildContext context) {
     return FlutterMap(
-      // mapController: MapController(),
+      mapController: _mapController,
       options: const MapOptions(
           initialCenter: LatLng(51.509364, -0.128928),
           initialZoom: 3.2,
