@@ -42,6 +42,11 @@ dependencies:
   latlong2: ^0.9.1
   flutter_map_cancellable_tile_provider: ^3.0.0-dev.1
   geolocator: ^12.0.0
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+  flutter_localizations:
+    sdk: flutter
+  intl: any
 
 dev_dependencies:
   flutter_test:
@@ -53,13 +58,17 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
+  riverpod_generator: ^2.4.0
+  build_runner: ^2.4.11
+  custom_lint: ^0.6.4
+  riverpod_lint: ^2.3.10
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  generate: true
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -95,3 +104,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_intl:
+  enabled: true
