@@ -3,5 +3,16 @@
   "language": "English",
   "mainTitle": "Car rescue",
   "mainDrawerRegistration": "Registration",
-  "mainDrawerLogin": "Login"
+  "mainDrawerLogin": "Login",
+
+  "authUsername": "Username",
+  "authEmail": "E-mail",
+  "authPassword": "Password",
+  "authPasswordAgain": "Password again",
+  "authMobileNumber": "Mobile",
+  "authMissingFullname" : "Username is missing",
+  "authMissingEmail": "",
+  "authMissingPassword": "",
+  "authMissingConfirmPassword": "",
+  "authMissingMobileNumber": ""
 }

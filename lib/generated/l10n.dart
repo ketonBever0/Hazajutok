@@ -89,6 +89,106 @@ class S {
       args: [],
     );
   }
+
+  /// `Username`
+  String get authUsername {
+    return Intl.message(
+      'Username',
+      name: 'authUsername',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `E-mail`
+  String get authEmail {
+    return Intl.message(
+      'E-mail',
+      name: 'authEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get authPassword {
+    return Intl.message(
+      'Password',
+      name: 'authPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password again`
+  String get authPasswordAgain {
+    return Intl.message(
+      'Password again',
+      name: 'authPasswordAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mobile`
+  String get authMobileNumber {
+    return Intl.message(
+      'Mobile',
+      name: 'authMobileNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Username is missing`
+  String get authMissingFullname {
+    return Intl.message(
+      'Username is missing',
+      name: 'authMissingFullname',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get authMissingEmail {
+    return Intl.message(
+      '',
+      name: 'authMissingEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get authMissingPassword {
+    return Intl.message(
+      '',
+      name: 'authMissingPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get authMissingConfirmPassword {
+    return Intl.message(
+      '',
+      name: 'authMissingConfirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get authMissingMobileNumber {
+    return Intl.message(
+      '',
+      name: 'authMissingMobileNumber',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -97,7 +197,6 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
-      Locale.fromSubtags(languageCode: 'hu'),
     ];
   }
 

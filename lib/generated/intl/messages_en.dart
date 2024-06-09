@@ -22,6 +22,18 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "authEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+        "authMissingConfirmPassword": MessageLookupByLibrary.simpleMessage(""),
+        "authMissingEmail": MessageLookupByLibrary.simpleMessage(""),
+        "authMissingFullname":
+            MessageLookupByLibrary.simpleMessage("Username is missing"),
+        "authMissingMobileNumber": MessageLookupByLibrary.simpleMessage(""),
+        "authMissingPassword": MessageLookupByLibrary.simpleMessage(""),
+        "authMobileNumber": MessageLookupByLibrary.simpleMessage("Mobile"),
+        "authPassword": MessageLookupByLibrary.simpleMessage("Password"),
+        "authPasswordAgain":
+            MessageLookupByLibrary.simpleMessage("Password again"),
+        "authUsername": MessageLookupByLibrary.simpleMessage("Username"),
         "language": MessageLookupByLibrary.simpleMessage("English"),
         "mainDrawerLogin": MessageLookupByLibrary.simpleMessage("Login"),
         "mainDrawerRegistration":
