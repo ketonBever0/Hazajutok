@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hazajutok/pages/mainscreen/consumer_drawer.dart';
 import 'package:hazajutok/pages/mainscreen/home.dart';
 import 'package:hazajutok/pages/mainscreen/map.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -16,29 +17,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(child: Text("Welcome!")),
-            ListTile(
-              leading: Icon(Icons.add),
-              title: Text(AppLocalizations.of(context)!.mainDrawerRegistration),
-              onTap: () {Navigator.pushNamed(context, "/register");},
-            ),
-            ListTile(
-              leading: Icon(Icons.login),
-              title: Text(AppLocalizations.of(context)!.mainDrawerLogin),
-              onTap: () {Navigator.pushNamed(context, "/login");},
-            ),
-            Divider(),
-            ListTile(
-              leading: Icon(Icons.language),
-              title: Text(AppLocalizations.of(context)!.language),
-            ),
-          ],
-        ),
-      ),
+      drawer: ConsumerDrawer(),
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(AppLocalizations.of(context)!.mainTitle),

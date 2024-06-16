@@ -3,8 +3,8 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:hazajutok/pages/auth/login/screen.dart';
-import 'package:hazajutok/pages/auth/registration/screen.dart';
+import 'package:hazajutok/pages/auth/login/login_screen.dart';
+import 'package:hazajutok/pages/auth/registration/registration_screen.dart';
 import 'package:hazajutok/pages/mainscreen.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'firebase_options.dart';
@@ -26,7 +26,6 @@ FirebaseAnalytics analytics = FirebaseAnalytics.instance;
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
@@ -35,11 +34,11 @@ class MyApp extends ConsumerWidget {
       title: 'Flutter Demo',
       routes: <String, WidgetBuilder>{
         "/main": (BuildContext ctx) => MainScreen(),
-        "/register": (BuildContext ctx) => RegisterScreen(),
+        "/register": (BuildContext ctx) => RegistrationScreen(),
         "/login": (BuildContext ctx) => LoginScreen(),
       },
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),

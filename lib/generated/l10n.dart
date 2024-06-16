@@ -90,11 +90,31 @@ class S {
     );
   }
 
+  /// `My Account`
+  String get mainDrawerMyAccount {
+    return Intl.message(
+      'My Account',
+      name: 'mainDrawerMyAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log out`
+  String get mainDrawerLogOut {
+    return Intl.message(
+      'Log out',
+      name: 'mainDrawerLogOut',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Username`
-  String get authUsername {
+  String get authFullname {
     return Intl.message(
       'Username',
-      name: 'authUsername',
+      name: 'authFullname',
       desc: '',
       args: [],
     );
@@ -150,41 +170,101 @@ class S {
     );
   }
 
-  /// ``
+  /// `E-mail is missing`
   String get authMissingEmail {
     return Intl.message(
-      '',
+      'E-mail is missing',
       name: 'authMissingEmail',
       desc: '',
       args: [],
     );
   }
 
-  /// ``
+  /// `Password is missing`
   String get authMissingPassword {
     return Intl.message(
-      '',
+      'Password is missing',
       name: 'authMissingPassword',
       desc: '',
       args: [],
     );
   }
 
-  /// ``
+  /// `Confirm password is missing`
   String get authMissingConfirmPassword {
     return Intl.message(
-      '',
+      'Confirm password is missing',
       name: 'authMissingConfirmPassword',
       desc: '',
       args: [],
     );
   }
 
-  /// ``
+  /// `Password and Confirm password must be equal`
+  String get authPasswordAndConfirmPasswordNotMatching {
+    return Intl.message(
+      'Password and Confirm password must be equal',
+      name: 'authPasswordAndConfirmPasswordNotMatching',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mobile number is missing`
   String get authMissingMobileNumber {
     return Intl.message(
-      '',
+      'Mobile number is missing',
       name: 'authMissingMobileNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Registered as`
+  String get registrationSuccesful {
+    return Intl.message(
+      'Registered as',
+      name: 'registrationSuccesful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Registration failed.`
+  String get registrationFailed {
+    return Intl.message(
+      'Registration failed.',
+      name: 'registrationFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome back`
+  String get loginSuccess {
+    return Intl.message(
+      'Welcome back',
+      name: 'loginSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provided user not exists.`
+  String get loginErrorNoUser {
+    return Intl.message(
+      'Provided user not exists.',
+      name: 'loginErrorNoUser',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provided password is wrong.`
+  String get loginErrorWrongPassword {
+    return Intl.message(
+      'Provided password is wrong.',
+      name: 'loginErrorWrongPassword',
       desc: '',
       args: [],
     );

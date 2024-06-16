@@ -5,14 +5,25 @@
   "mainDrawerRegistration": "Registration",
   "mainDrawerLogin": "Login",
 
-  "authUsername": "Username",
+  "mainDrawerMyAccount": "My Account",
+  "mainDrawerLogOut": "Log out",
+
+  "authFullname": "Username",
   "authEmail": "E-mail",
   "authPassword": "Password",
   "authPasswordAgain": "Password again",
   "authMobileNumber": "Mobile",
   "authMissingFullname" : "Username is missing",
-  "authMissingEmail": "",
-  "authMissingPassword": "",
-  "authMissingConfirmPassword": "",
-  "authMissingMobileNumber": ""
+  "authMissingEmail": "E-mail is missing",
+  "authMissingPassword": "Password is missing",
+  "authMissingConfirmPassword": "Confirm password is missing",
+  "authPasswordAndConfirmPasswordNotMatching": "Password and Confirm password must be equal",
+  "authMissingMobileNumber": "Mobile number is missing",
+
+  "registrationSuccesful": "Registered as",
+  "registrationFailed": "Registration failed.",
+
+  "loginSuccess": "Welcome back",
+  "loginErrorNoUser": "Provided user not exists.",
+  "loginErrorWrongPassword": "Provided password is wrong."
 }

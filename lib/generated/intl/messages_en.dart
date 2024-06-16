@@ -23,21 +23,40 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "authEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
-        "authMissingConfirmPassword": MessageLookupByLibrary.simpleMessage(""),
-        "authMissingEmail": MessageLookupByLibrary.simpleMessage(""),
+        "authFullname": MessageLookupByLibrary.simpleMessage("Username"),
+        "authMissingConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("Confirm password is missing"),
+        "authMissingEmail":
+            MessageLookupByLibrary.simpleMessage("E-mail is missing"),
         "authMissingFullname":
             MessageLookupByLibrary.simpleMessage("Username is missing"),
-        "authMissingMobileNumber": MessageLookupByLibrary.simpleMessage(""),
-        "authMissingPassword": MessageLookupByLibrary.simpleMessage(""),
+        "authMissingMobileNumber":
+            MessageLookupByLibrary.simpleMessage("Mobile number is missing"),
+        "authMissingPassword":
+            MessageLookupByLibrary.simpleMessage("Password is missing"),
         "authMobileNumber": MessageLookupByLibrary.simpleMessage("Mobile"),
         "authPassword": MessageLookupByLibrary.simpleMessage("Password"),
         "authPasswordAgain":
             MessageLookupByLibrary.simpleMessage("Password again"),
-        "authUsername": MessageLookupByLibrary.simpleMessage("Username"),
+        "authPasswordAndConfirmPasswordNotMatching":
+            MessageLookupByLibrary.simpleMessage(
+                "Password and Confirm password must be equal"),
         "language": MessageLookupByLibrary.simpleMessage("English"),
+        "loginErrorNoUser":
+            MessageLookupByLibrary.simpleMessage("Provided user not exists."),
+        "loginErrorWrongPassword":
+            MessageLookupByLibrary.simpleMessage("Provided password is wrong."),
+        "loginSuccess": MessageLookupByLibrary.simpleMessage("Welcome back"),
+        "mainDrawerLogOut": MessageLookupByLibrary.simpleMessage("Log out"),
         "mainDrawerLogin": MessageLookupByLibrary.simpleMessage("Login"),
+        "mainDrawerMyAccount":
+            MessageLookupByLibrary.simpleMessage("My Account"),
         "mainDrawerRegistration":
             MessageLookupByLibrary.simpleMessage("Registration"),
-        "mainTitle": MessageLookupByLibrary.simpleMessage("Car rescue")
+        "mainTitle": MessageLookupByLibrary.simpleMessage("Car rescue"),
+        "registrationFailed":
+            MessageLookupByLibrary.simpleMessage("Registration failed."),
+        "registrationSuccesful":
+            MessageLookupByLibrary.simpleMessage("Registered as")
       };
 }
