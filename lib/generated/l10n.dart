@@ -250,6 +250,16 @@ class S {
     );
   }
 
+  /// `Invalid credentials.`
+  String get loginErrorInvalidCredentials {
+    return Intl.message(
+      'Invalid credentials.',
+      name: 'loginErrorInvalidCredentials',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Provided user not exists.`
   String get loginErrorNoUser {
     return Intl.message(
@@ -265,6 +275,16 @@ class S {
     return Intl.message(
       'Provided password is wrong.',
       name: 'loginErrorWrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unknown error.`
+  String get loginErrorUnknown {
+    return Intl.message(
+      'Unknown error.',
+      name: 'loginErrorUnknown',
       desc: '',
       args: [],
     );

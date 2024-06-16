@@ -42,8 +42,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Password and Confirm password must be equal"),
         "language": MessageLookupByLibrary.simpleMessage("English"),
+        "loginErrorInvalidCredentials":
+            MessageLookupByLibrary.simpleMessage("Invalid credentials."),
         "loginErrorNoUser":
             MessageLookupByLibrary.simpleMessage("Provided user not exists."),
+        "loginErrorUnknown":
+            MessageLookupByLibrary.simpleMessage("Unknown error."),
         "loginErrorWrongPassword":
             MessageLookupByLibrary.simpleMessage("Provided password is wrong."),
         "loginSuccess": MessageLookupByLibrary.simpleMessage("Welcome back"),

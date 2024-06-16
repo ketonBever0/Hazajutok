@@ -17,11 +17,12 @@ class FirebaseLoginRepository extends LoginRepository {
 
       return Left(core.User.fromFirestore(docUser));
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'user-not-found') {
-        return const Right(LoginError.NO_USER);
-      } else if (e.code == 'wrong-password') {
-        return const Right(LoginError.WRONG_PASSWORD);
-      }
+      if (e.code == "invalid-credential") return const Right(LoginError.INVALID_CREDENTIALS);
+      // if (e.code == 'user-not-found') {
+      //   return const Right(LoginError.NO_USER);
+      // } else if (e.code == 'wrong-password') {
+      //   return const Right(LoginError.WRONG_PASSWORD);
+      // }
     }
     return const Right(LoginError.UNKNOWN);
   }

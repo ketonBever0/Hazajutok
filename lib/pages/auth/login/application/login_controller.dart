@@ -26,8 +26,7 @@ class LoginController extends Notifier<LoginForm> {
     final user = await ref
         .read(loginRepositoryProvider)
         .login(email: state.email, password: state.password);
-    await ref.read(authControllerProvider.notifier).signInUser(
-        email: state.email, password: state.password);
+    await ref.read(loginRepositoryProvider).login(email: state.email, password: state.password);
     return user;
   }
 

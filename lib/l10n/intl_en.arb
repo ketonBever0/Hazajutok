@@ -24,6 +24,8 @@
   "registrationFailed": "Registration failed.",
 
   "loginSuccess": "Welcome back",
+  "loginErrorInvalidCredentials": "Invalid credentials.",
   "loginErrorNoUser": "Provided user not exists.",
-  "loginErrorWrongPassword": "Provided password is wrong."
+  "loginErrorWrongPassword": "Provided password is wrong.",
+  "loginErrorUnknown": "Unknown error."
 }

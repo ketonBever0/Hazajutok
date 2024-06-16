@@ -21,18 +21,29 @@ class LoginScreen extends ConsumerWidget {
 
       String smContent = "";
 
-      if (login is User) {
-        smContent = '${AppLocalizations.of(context)!.loginSuccess}!';
-      } else {
-        switch (login) {
-          case LoginError.NO_USER:
-            smContent = AppLocalizations.of(context)!.loginErrorNoUser;
-          case LoginError.WRONG_PASSWORD:
-            smContent = AppLocalizations.of(context)!.loginErrorWrongPassword;
-        }
-      }
+      login.fold(
+        (user) {
+          smContent = '${AppLocalizations.of(context)!.loginSuccess}!';
+          Navigator.pushReplacementNamed(context, "/");
+        },
+        (error) {
+          switch (error) {
+            case LoginError.INVALID_CREDENTIALS:
+              smContent =
+                  AppLocalizations.of(context)!.loginErrorInvalidCredentials;
+            case LoginError.NO_USER:
+              smContent = AppLocalizations.of(context)!.loginErrorNoUser;
+              break;
+            case LoginError.WRONG_PASSWORD:
+              smContent = AppLocalizations.of(context)!.loginErrorWrongPassword;
+              break;
+            case LoginError.UNKNOWN:
+              smContent = AppLocalizations.of(context)!.loginErrorUnknown;
+              break;
+          }
+        },
+      );
 
-      Navigator.pushReplacementNamed(context, "/");
       sm.showSnackBar(SnackBar(content: Text(smContent)));
     }
 
