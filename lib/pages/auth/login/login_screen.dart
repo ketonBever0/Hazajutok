@@ -23,7 +23,7 @@ class LoginScreen extends ConsumerWidget {
 
       login.fold(
         (user) {
-          smContent = '${AppLocalizations.of(context)!.loginSuccess}!';
+          smContent = AppLocalizations.of(context)!.loginSuccess;
           Navigator.pushReplacementNamed(context, "/");
         },
         (error) {

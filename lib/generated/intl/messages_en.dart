@@ -41,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "authPasswordAndConfirmPasswordNotMatching":
             MessageLookupByLibrary.simpleMessage(
                 "Password and Confirm password must be equal"),
+        "confirmLogOut": MessageLookupByLibrary.simpleMessage("Logout?"),
         "language": MessageLookupByLibrary.simpleMessage("English"),
         "loginErrorInvalidCredentials":
             MessageLookupByLibrary.simpleMessage("Invalid credentials."),
@@ -50,7 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Unknown error."),
         "loginErrorWrongPassword":
             MessageLookupByLibrary.simpleMessage("Provided password is wrong."),
-        "loginSuccess": MessageLookupByLibrary.simpleMessage("Welcome back"),
+        "loginSuccess": MessageLookupByLibrary.simpleMessage("Welcome back!"),
         "mainDrawerLogOut": MessageLookupByLibrary.simpleMessage("Log out"),
         "mainDrawerLogin": MessageLookupByLibrary.simpleMessage("Login"),
         "mainDrawerMyAccount":

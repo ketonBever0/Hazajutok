@@ -240,10 +240,10 @@ class S {
     );
   }
 
-  /// `Welcome back`
+  /// `Welcome back!`
   String get loginSuccess {
     return Intl.message(
-      'Welcome back',
+      'Welcome back!',
       name: 'loginSuccess',
       desc: '',
       args: [],
@@ -285,6 +285,16 @@ class S {
     return Intl.message(
       'Unknown error.',
       name: 'loginErrorUnknown',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout?`
+  String get confirmLogOut {
+    return Intl.message(
+      'Logout?',
+      name: 'confirmLogOut',
       desc: '',
       args: [],
     );

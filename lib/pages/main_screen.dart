@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hazajutok/pages/mainscreen/consumer_drawer.dart';
 import 'package:hazajutok/pages/mainscreen/home.dart';
 import 'package:hazajutok/pages/mainscreen/map.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:hazajutok/pages/mainscreen/rescue_me.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -29,7 +31,7 @@ class _MainScreenState extends State<MainScreen> {
             _pageIndex = index;
           });
         },
-        destinations: const <Widget>[
+        destinations: <Widget>[
           NavigationDestination(
             icon: Icon(Icons.home_outlined),
             selectedIcon: Icon(Icons.home),
@@ -40,12 +42,19 @@ class _MainScreenState extends State<MainScreen> {
             selectedIcon: Icon(Icons.map),
             label: 'Map',
           ),
-          NavigationDestination(
-            icon: Icon(Icons.flag_outlined),
-            selectedIcon: Icon(Icons.flag),
-            label: 'Support',
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.red,
+              border: Border.all(color: Colors.red),
+              borderRadius: const BorderRadius.all(Radius.circular(60))
+            ),
+            child: const NavigationDestination(
+              icon: Icon(Icons.flag_outlined),
+              selectedIcon: Icon(Icons.flag),
+              label: 'SOS',
+            ),
           ),
-          NavigationDestination(
+          const NavigationDestination(
             icon: Badge(
               label: Text('2'),
               child: Icon(Icons.messenger_outlined),
@@ -61,7 +70,7 @@ class _MainScreenState extends State<MainScreen> {
           children: <Widget>[
             Home(),
             WorldMap(),
-            Placeholder(),
+            RescueMe(),
             Placeholder(),
           ],
         ),

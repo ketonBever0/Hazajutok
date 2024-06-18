@@ -23,9 +23,11 @@
   "registrationSuccesful": "Registered as",
   "registrationFailed": "Registration failed.",
 
-  "loginSuccess": "Welcome back",
+  "loginSuccess": "Welcome back!",
   "loginErrorInvalidCredentials": "Invalid credentials.",
   "loginErrorNoUser": "Provided user not exists.",
   "loginErrorWrongPassword": "Provided password is wrong.",
-  "loginErrorUnknown": "Unknown error."
+  "loginErrorUnknown": "Unknown error.",
+
+  "confirmLogOut": "Logout?"
 }

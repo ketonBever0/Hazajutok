@@ -1,3 +1,4 @@
+import 'package:confirm_dialog/confirm_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -21,22 +22,34 @@ class ConsumerDrawer extends ConsumerWidget {
             ListTile(
               leading: const Icon(Icons.add),
               title: Text(AppLocalizations.of(context)!.mainDrawerRegistration),
-              onTap: () {Navigator.pushNamed(context, "/register");},
+              onTap: () {
+                Navigator.pushNamed(context, "/register");
+              },
             ),
             ListTile(
               leading: const Icon(Icons.login),
               title: Text(AppLocalizations.of(context)!.mainDrawerLogin),
-              onTap: () {Navigator.pushNamed(context, "/login");},
+              onTap: () {
+                Navigator.pushNamed(context, "/login");
+              },
             ),
           ] else ...[
             ListTile(
               leading: const Icon(Icons.person),
               title: Text(AppLocalizations.of(context)!.mainDrawerMyAccount),
+              onTap: () {
+                Navigator.pushNamed(context, "/me");
+              },
             ),
             ListTile(
               leading: const Icon(Icons.logout),
               title: Text(AppLocalizations.of(context)!.mainDrawerLogOut),
-              onTap: controller.signOut,
+              onTap: () async {
+                if (await confirm(context,
+                    title: Text(AppLocalizations.of(context)!.confirmLogOut))) {
+                  controller.signOut;
+                }
+              },
             ),
           ],
           const Divider(),

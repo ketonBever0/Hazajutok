@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hazajutok/pages/auth/login/login_screen.dart';
+import 'package:hazajutok/pages/auth/me/profile_screen.dart';
 import 'package:hazajutok/pages/auth/registration/registration_screen.dart';
-import 'package:hazajutok/pages/mainscreen.dart';
+import 'package:hazajutok/pages/main_screen.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'firebase_options.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -36,6 +37,8 @@ class MyApp extends ConsumerWidget {
         "/main": (BuildContext ctx) => MainScreen(),
         "/register": (BuildContext ctx) => RegistrationScreen(),
         "/login": (BuildContext ctx) => LoginScreen(),
+        "/me": (BuildContext ctx) => ProfileScreen(),
+
       },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),

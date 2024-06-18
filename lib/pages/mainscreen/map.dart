@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:geolocator/geolocator.dart';
@@ -13,16 +15,19 @@ class WorldMap extends StatefulWidget {
 class _WorldMapState extends State<WorldMap> {
   LatLng _currentPosition = LatLng(0, 0);
   final MapController _mapController = new MapController();
+  StreamSubscription<Position>? _positionStream;
 
   @override
   void initState() {
     super.initState();
+    _startPositionStream();
+
     // WidgetsBinding.instance.addPostFrameCallback((_) {
     //   _getPosition();
     // });
   }
 
-  Future<void> _getPosition() async {
+  void _startPositionStream() async {
     LocationPermission permission;
 
     bool isEnabled = await Geolocator.isLocationServiceEnabled();
@@ -36,10 +41,25 @@ class _WorldMapState extends State<WorldMap> {
       if (permission == LocationPermission.denied) return;
     }
 
+    _positionStream = Geolocator.getPositionStream(
+      locationSettings: const LocationSettings(
+        accuracy: LocationAccuracy.high,
+        distanceFilter: 5
+      )
+    ).listen((Position position) {
+      setState(() {
+        _currentPosition = LatLng(position.latitude, position.longitude);
+        // _mapController.move(_currentPosition, 10);
+      });
+    });
+
+  }
+
+  Future<void> _getPosition() async {
     Position position = await Geolocator.getCurrentPosition();
     setState(() {
       _currentPosition = LatLng(position.latitude, position.longitude);
-      _mapController.move(_currentPosition, 15);
+      _mapController.move(_currentPosition, 18);
       // print(_currentPosition);
     });
   }
@@ -54,7 +74,8 @@ class _WorldMapState extends State<WorldMap> {
           interactionOptions: InteractionOptions(
               flags: InteractiveFlag.drag |
                   InteractiveFlag.scrollWheelZoom |
-                  InteractiveFlag.pinchZoom)),
+                  InteractiveFlag.pinchZoom),
+      ),
       children: [
         TileLayer(
           urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -67,8 +88,8 @@ class _WorldMapState extends State<WorldMap> {
               height: 80.0,
               point: _currentPosition,
               child: Container(
-                child: Icon(
-                  Icons.location_on,
+                child: const Icon(
+                  Icons.my_location,
                   color: Colors.red,
                   size: 40.0,
                 ),
