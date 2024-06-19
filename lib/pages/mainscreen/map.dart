@@ -42,17 +42,20 @@ class _WorldMapState extends State<WorldMap> {
     }
 
     _positionStream = Geolocator.getPositionStream(
-      locationSettings: const LocationSettings(
-        accuracy: LocationAccuracy.high,
-        distanceFilter: 5
-      )
-    ).listen((Position position) {
+            locationSettings: const LocationSettings(
+                accuracy: LocationAccuracy.high, distanceFilter: 5))
+        .listen((Position position) {
       setState(() {
         _currentPosition = LatLng(position.latitude, position.longitude);
         // _mapController.move(_currentPosition, 10);
       });
     });
+  }
 
+  @override
+  void dispose() {
+    _positionStream?.cancel();
+    super.dispose();
   }
 
   Future<void> _getPosition() async {
@@ -69,12 +72,12 @@ class _WorldMapState extends State<WorldMap> {
     return FlutterMap(
       mapController: _mapController,
       options: const MapOptions(
-          initialCenter: LatLng(51.509364, -0.128928),
-          initialZoom: 3.2,
-          interactionOptions: InteractionOptions(
-              flags: InteractiveFlag.drag |
-                  InteractiveFlag.scrollWheelZoom |
-                  InteractiveFlag.pinchZoom),
+        initialCenter: LatLng(51.509364, -0.128928),
+        initialZoom: 3.2,
+        interactionOptions: InteractionOptions(
+            flags: InteractiveFlag.drag |
+                InteractiveFlag.scrollWheelZoom |
+                InteractiveFlag.pinchZoom),
       ),
       children: [
         TileLayer(
