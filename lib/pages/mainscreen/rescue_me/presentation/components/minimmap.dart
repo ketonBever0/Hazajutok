@@ -6,7 +6,14 @@ import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
 
 class Minimmap extends StatefulWidget {
-  const Minimmap({super.key});
+  const Minimmap({
+    super.key,
+    required this.value,
+    required this.onChanged
+  });
+
+  final LatLng? value;
+  final ValueChanged<LatLng> onChanged;
 
   @override
   State<Minimmap> createState() => _MinimmapState();
@@ -21,6 +28,7 @@ class _MinimmapState extends State<Minimmap> {
   @override
   void initState() {
     super.initState();
+    _currentPosition = widget.value ?? LatLng(0, 0);
     _startPositionStream();
   }
 
@@ -45,6 +53,7 @@ class _MinimmapState extends State<Minimmap> {
       setState(() {
         _currentPosition = LatLng(position.latitude, position.longitude);
         _mapController.move(_currentPosition, 14);
+        widget.onChanged(_currentPosition);
       });
     });
   }

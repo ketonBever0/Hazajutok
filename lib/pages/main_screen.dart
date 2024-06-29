@@ -5,6 +5,8 @@ import 'package:hazajutok/pages/mainscreen/map.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hazajutok/pages/mainscreen/rescue_me/presentation/rescue_me.dart';
 
+import '../main.dart';
+
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 

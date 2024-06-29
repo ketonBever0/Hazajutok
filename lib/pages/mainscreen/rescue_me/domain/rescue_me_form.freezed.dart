@@ -16,11 +16,15 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$RescueMeForm {
+  LatLng? get where => throw _privateConstructorUsedError;
   bool get isLoggedIn => throw _privateConstructorUsedError;
   String get fullname => throw _privateConstructorUsedError;
+  bool get fullnameInit => throw _privateConstructorUsedError;
   String get mobile => throw _privateConstructorUsedError;
+  bool get mobileInit => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
   String get details => throw _privateConstructorUsedError;
+  bool get detailsInit => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $RescueMeFormCopyWith<RescueMeForm> get copyWith =>
@@ -34,11 +38,15 @@ abstract class $RescueMeFormCopyWith<$Res> {
       _$RescueMeFormCopyWithImpl<$Res, RescueMeForm>;
   @useResult
   $Res call(
-      {bool isLoggedIn,
+      {LatLng? where,
+      bool isLoggedIn,
       String fullname,
+      bool fullnameInit,
       String mobile,
+      bool mobileInit,
       String type,
-      String details});
+      String details,
+      bool detailsInit});
 }
 
 /// @nodoc
@@ -54,13 +62,21 @@ class _$RescueMeFormCopyWithImpl<$Res, $Val extends RescueMeForm>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? where = freezed,
     Object? isLoggedIn = null,
     Object? fullname = null,
+    Object? fullnameInit = null,
     Object? mobile = null,
+    Object? mobileInit = null,
     Object? type = null,
     Object? details = null,
+    Object? detailsInit = null,
   }) {
     return _then(_value.copyWith(
+      where: freezed == where
+          ? _value.where
+          : where // ignore: cast_nullable_to_non_nullable
+              as LatLng?,
       isLoggedIn: null == isLoggedIn
           ? _value.isLoggedIn
           : isLoggedIn // ignore: cast_nullable_to_non_nullable
@@ -69,10 +85,18 @@ class _$RescueMeFormCopyWithImpl<$Res, $Val extends RescueMeForm>
           ? _value.fullname
           : fullname // ignore: cast_nullable_to_non_nullable
               as String,
+      fullnameInit: null == fullnameInit
+          ? _value.fullnameInit
+          : fullnameInit // ignore: cast_nullable_to_non_nullable
+              as bool,
       mobile: null == mobile
           ? _value.mobile
           : mobile // ignore: cast_nullable_to_non_nullable
               as String,
+      mobileInit: null == mobileInit
+          ? _value.mobileInit
+          : mobileInit // ignore: cast_nullable_to_non_nullable
+              as bool,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -81,6 +105,10 @@ class _$RescueMeFormCopyWithImpl<$Res, $Val extends RescueMeForm>
           ? _value.details
           : details // ignore: cast_nullable_to_non_nullable
               as String,
+      detailsInit: null == detailsInit
+          ? _value.detailsInit
+          : detailsInit // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -94,11 +122,15 @@ abstract class _$$$RescueMeFormImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {bool isLoggedIn,
+      {LatLng? where,
+      bool isLoggedIn,
       String fullname,
+      bool fullnameInit,
       String mobile,
+      bool mobileInit,
       String type,
-      String details});
+      String details,
+      bool detailsInit});
 }
 
 /// @nodoc
@@ -112,13 +144,21 @@ class __$$$RescueMeFormImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? where = freezed,
     Object? isLoggedIn = null,
     Object? fullname = null,
+    Object? fullnameInit = null,
     Object? mobile = null,
+    Object? mobileInit = null,
     Object? type = null,
     Object? details = null,
+    Object? detailsInit = null,
   }) {
     return _then(_$$RescueMeFormImpl(
+      where: freezed == where
+          ? _value.where
+          : where // ignore: cast_nullable_to_non_nullable
+              as LatLng?,
       isLoggedIn: null == isLoggedIn
           ? _value.isLoggedIn
           : isLoggedIn // ignore: cast_nullable_to_non_nullable
@@ -127,10 +167,18 @@ class __$$$RescueMeFormImplCopyWithImpl<$Res>
           ? _value.fullname
           : fullname // ignore: cast_nullable_to_non_nullable
               as String,
+      fullnameInit: null == fullnameInit
+          ? _value.fullnameInit
+          : fullnameInit // ignore: cast_nullable_to_non_nullable
+              as bool,
       mobile: null == mobile
           ? _value.mobile
           : mobile // ignore: cast_nullable_to_non_nullable
               as String,
+      mobileInit: null == mobileInit
+          ? _value.mobileInit
+          : mobileInit // ignore: cast_nullable_to_non_nullable
+              as bool,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -139,6 +187,10 @@ class __$$$RescueMeFormImplCopyWithImpl<$Res>
           ? _value.details
           : details // ignore: cast_nullable_to_non_nullable
               as String,
+      detailsInit: null == detailsInit
+          ? _value.detailsInit
+          : detailsInit // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -147,27 +199,39 @@ class __$$$RescueMeFormImplCopyWithImpl<$Res>
 
 class _$$RescueMeFormImpl extends $RescueMeForm {
   const _$$RescueMeFormImpl(
-      {required this.isLoggedIn,
+      {required this.where,
+      required this.isLoggedIn,
       required this.fullname,
+      required this.fullnameInit,
       required this.mobile,
+      required this.mobileInit,
       required this.type,
-      required this.details})
+      required this.details,
+      required this.detailsInit})
       : super._();
 
+  @override
+  final LatLng? where;
   @override
   final bool isLoggedIn;
   @override
   final String fullname;
   @override
+  final bool fullnameInit;
+  @override
   final String mobile;
+  @override
+  final bool mobileInit;
   @override
   final String type;
   @override
   final String details;
+  @override
+  final bool detailsInit;
 
   @override
   String toString() {
-    return 'RescueMeForm(isLoggedIn: $isLoggedIn, fullname: $fullname, mobile: $mobile, type: $type, details: $details)';
+    return 'RescueMeForm(where: $where, isLoggedIn: $isLoggedIn, fullname: $fullname, fullnameInit: $fullnameInit, mobile: $mobile, mobileInit: $mobileInit, type: $type, details: $details, detailsInit: $detailsInit)';
   }
 
   @override
@@ -175,18 +239,25 @@ class _$$RescueMeFormImpl extends $RescueMeForm {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$$RescueMeFormImpl &&
+            (identical(other.where, where) || other.where == where) &&
             (identical(other.isLoggedIn, isLoggedIn) ||
                 other.isLoggedIn == isLoggedIn) &&
             (identical(other.fullname, fullname) ||
                 other.fullname == fullname) &&
+            (identical(other.fullnameInit, fullnameInit) ||
+                other.fullnameInit == fullnameInit) &&
             (identical(other.mobile, mobile) || other.mobile == mobile) &&
+            (identical(other.mobileInit, mobileInit) ||
+                other.mobileInit == mobileInit) &&
             (identical(other.type, type) || other.type == type) &&
-            (identical(other.details, details) || other.details == details));
+            (identical(other.details, details) || other.details == details) &&
+            (identical(other.detailsInit, detailsInit) ||
+                other.detailsInit == detailsInit));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, isLoggedIn, fullname, mobile, type, details);
+  int get hashCode => Object.hash(runtimeType, where, isLoggedIn, fullname,
+      fullnameInit, mobile, mobileInit, type, details, detailsInit);
 
   @JsonKey(ignore: true)
   @override
@@ -197,23 +268,35 @@ class _$$RescueMeFormImpl extends $RescueMeForm {
 
 abstract class $RescueMeForm extends RescueMeForm {
   const factory $RescueMeForm(
-      {required final bool isLoggedIn,
+      {required final LatLng? where,
+      required final bool isLoggedIn,
       required final String fullname,
+      required final bool fullnameInit,
       required final String mobile,
+      required final bool mobileInit,
       required final String type,
-      required final String details}) = _$$RescueMeFormImpl;
+      required final String details,
+      required final bool detailsInit}) = _$$RescueMeFormImpl;
   const $RescueMeForm._() : super._();
 
+  @override
+  LatLng? get where;
   @override
   bool get isLoggedIn;
   @override
   String get fullname;
   @override
+  bool get fullnameInit;
+  @override
   String get mobile;
+  @override
+  bool get mobileInit;
   @override
   String get type;
   @override
   String get details;
+  @override
+  bool get detailsInit;
   @override
   @JsonKey(ignore: true)
   _$$$RescueMeFormImplCopyWith<_$$RescueMeFormImpl> get copyWith =>

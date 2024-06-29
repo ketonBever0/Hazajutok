@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a hu locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,7 +18,7 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'hu';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -42,7 +42,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Password and Confirm password must be equal"),
         "confirmLogOut": MessageLookupByLibrary.simpleMessage("Logout?"),
-        "language": MessageLookupByLibrary.simpleMessage("English"),
+        "language": MessageLookupByLibrary.simpleMessage("Magyar"),
         "loginErrorInvalidCredentials":
             MessageLookupByLibrary.simpleMessage("Invalid credentials."),
         "loginErrorNoUser":
@@ -79,7 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Motorcycle"),
         "mainRescueMeTypeOther": MessageLookupByLibrary.simpleMessage("Other"),
         "mainRescueMeTypeTruck": MessageLookupByLibrary.simpleMessage("Truck"),
-        "mainTitle": MessageLookupByLibrary.simpleMessage("Car rescue"),
+        "mainTitle": MessageLookupByLibrary.simpleMessage("Járműmentés"),
         "registrationFailed":
             MessageLookupByLibrary.simpleMessage("Registration failed."),
         "registrationSuccesful":

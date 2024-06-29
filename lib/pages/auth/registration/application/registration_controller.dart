@@ -1,7 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hazajutok/pages/auth/registration/domain/registration_form.dart';
 import 'package:hazajutok/pages/auth/registration/infrastructure/providers.dart';
-
 import '../../user/domain/user.dart';
 
 class RegistrationController extends Notifier<RegistrationForm> {

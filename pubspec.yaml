@@ -52,6 +52,7 @@ dependencies:
   firebase_auth: ^5.0.0
   dartz: ^0.10.1
   confirm_dialog: ^1.0.3
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:

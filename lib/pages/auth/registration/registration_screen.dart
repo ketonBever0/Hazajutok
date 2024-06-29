@@ -1,8 +1,6 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:hazajutok/main.dart';
 import 'package:hazajutok/pages/auth/registration/application/registration_controller.dart';
 import 'package:hazajutok/pages/auth/registration/domain/registration_form.dart';
 

@@ -2,6 +2,7 @@ import 'package:confirm_dialog/confirm_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:hazajutok/main.dart';
 import 'package:hazajutok/pages/auth/core/application/auth_controller.dart';
 import 'package:hazajutok/pages/auth/core/domain/auth_state.dart';
 import 'package:hazajutok/pages/auth/core/infrastructure/providers.dart';
@@ -53,10 +54,17 @@ class ConsumerDrawer extends ConsumerWidget {
             ),
           ],
           const Divider(),
-          ListTile(
-            leading: const Icon(Icons.language),
-            title: Text(AppLocalizations.of(context)!.language),
-          ),
+          ExpansionTile(
+              leading: const Icon(Icons.language),
+              title: Text(AppLocalizations.of(context)!.language),
+              children: AppLocalizations.supportedLocales.map((Locale locale) {
+                return ListTile(
+                  title: Text(locale.languageCode),
+                  onTap: () {
+                    MyApp.setLocale(context, locale);
+                  },
+                );
+              }).toList()),
         ],
       ),
     );

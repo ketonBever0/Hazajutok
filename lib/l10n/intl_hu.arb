@@ -1,7 +1,7 @@
 {
-  "@@locale": "en",
-  "language": "English",
-  "mainTitle": "Car rescue",
+  "@@locale": "hu",
+  "language": "Magyar",
+  "mainTitle": "Járműmentés",
   "mainDrawerRegistration": "Registration",
   "mainDrawerLogin": "Login",
 

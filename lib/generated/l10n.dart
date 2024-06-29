@@ -299,6 +299,136 @@ class S {
       args: [],
     );
   }
+
+  /// `Your Name`
+  String get mainRescueMeFullname {
+    return Intl.message(
+      'Your Name',
+      name: 'mainRescueMeFullname',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name is missing`
+  String get mainRescueMeFullnameError {
+    return Intl.message(
+      'Name is missing',
+      name: 'mainRescueMeFullnameError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mobile number`
+  String get mainRescueMeMobile {
+    return Intl.message(
+      'Mobile number',
+      name: 'mainRescueMeMobile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mobile number is missing`
+  String get mainRescueMeMobileError {
+    return Intl.message(
+      'Mobile number is missing',
+      name: 'mainRescueMeMobileError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ``
+  String get mainRescueMeType {
+    return Intl.message(
+      '',
+      name: 'mainRescueMeType',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Motorcycle`
+  String get mainRescueMeTypeMotorCycle {
+    return Intl.message(
+      'Motorcycle',
+      name: 'mainRescueMeTypeMotorCycle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Car`
+  String get mainRescueMeTypeCar {
+    return Intl.message(
+      'Car',
+      name: 'mainRescueMeTypeCar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bus`
+  String get mainRescueMeTypeBus {
+    return Intl.message(
+      'Bus',
+      name: 'mainRescueMeTypeBus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Truck`
+  String get mainRescueMeTypeTruck {
+    return Intl.message(
+      'Truck',
+      name: 'mainRescueMeTypeTruck',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Other`
+  String get mainRescueMeTypeOther {
+    return Intl.message(
+      'Other',
+      name: 'mainRescueMeTypeOther',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please provide some details`
+  String get mainRescueMeDetails {
+    return Intl.message(
+      'Please provide some details',
+      name: 'mainRescueMeDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Details not provided`
+  String get mainRescueMeDetailsMissing {
+    return Intl.message(
+      'Details not provided',
+      name: 'mainRescueMeDetailsMissing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Request!`
+  String get mainRescueMeRequestHelp {
+    return Intl.message(
+      'Send Request!',
+      name: 'mainRescueMeRequestHelp',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -307,6 +437,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'hu'),
     ];
   }
 

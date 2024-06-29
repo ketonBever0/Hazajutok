@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hazajutok/pages/auth/login/login_screen.dart';
-import 'package:hazajutok/pages/auth/me/profile_screen.dart';
+import 'package:hazajutok/pages/auth/user/profile_screen.dart';
 import 'package:hazajutok/pages/auth/registration/registration_screen.dart';
 import 'package:hazajutok/pages/main_screen.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -24,21 +24,40 @@ Future<void> main() async {
 FirebaseFirestore db = FirebaseFirestore.instance;
 FirebaseAnalytics analytics = FirebaseAnalytics.instance;
 
-class MyApp extends ConsumerWidget {
+class MyApp extends ConsumerStatefulWidget {
   const MyApp({super.key});
 
+  static void setLocale(BuildContext context, Locale newLocale) {
+    _MyAppState state = context.findAncestorStateOfType<_MyAppState>()!;
+    state.setLocale(newLocale);
+  }
+
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<ConsumerStatefulWidget> createState() => _MyAppState();
+}
+
+class _MyAppState extends ConsumerState<MyApp> {
+  Locale _locale = const Locale('en', '');
+
+  void setLocale(Locale locale) {
+    setState(() {
+      _locale = locale;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
+      locale: _locale,
       title: 'Flutter Demo',
       routes: <String, WidgetBuilder>{
         "/main": (BuildContext ctx) => MainScreen(),
         "/register": (BuildContext ctx) => RegistrationScreen(),
         "/login": (BuildContext ctx) => LoginScreen(),
         "/me": (BuildContext ctx) => ProfileScreen(),
-
+        // "/language": (Buildcontext ctx) =>
       },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
