@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:latlong2/latlong.dart';
 
@@ -15,6 +16,7 @@ class HelpRequest with _$HelpRequest {
       required LatLng where,
       required bool? isStored,
       required String? model,
+      required User user,
       required String fullname,
       required String? email,
       required String vehicleType,
@@ -34,6 +36,7 @@ class HelpRequest with _$HelpRequest {
         where: data["where"],
         isStored: data["isStored"],
         model: data["model"],
+        user: data["user"],
         fullname: data["fullname"],
         email: data["email"],
         vehicleType: data["vehicleType"],

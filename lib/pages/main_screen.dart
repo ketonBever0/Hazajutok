@@ -3,9 +3,9 @@ import 'package:hazajutok/pages/mainscreen/consumer_drawer.dart';
 import 'package:hazajutok/pages/mainscreen/home.dart';
 import 'package:hazajutok/pages/mainscreen/map.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:hazajutok/pages/mainscreen/requests/presentation/requests_screen.dart';
 import 'package:hazajutok/pages/mainscreen/rescue_me/presentation/rescue_me.dart';
 
-import '../main.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -36,12 +36,12 @@ class _MainScreenState extends State<MainScreen> {
           NavigationDestination(
             icon: Icon(Icons.home_outlined),
             selectedIcon: Icon(Icons.home),
-            label: 'Home',
+            label: AppLocalizations.of(context)!.mainHomeTitle,
           ),
           NavigationDestination(
             icon: Icon(Icons.map_outlined),
             selectedIcon: Icon(Icons.map),
-            label: 'Map',
+            label: AppLocalizations.of(context)!.mainMapTitle,
           ),
           Container(
             decoration: BoxDecoration(
@@ -55,24 +55,25 @@ class _MainScreenState extends State<MainScreen> {
               label: 'SOS',
             ),
           ),
-          const NavigationDestination(
+          NavigationDestination(
             icon: Badge(
-              label: Text('2'),
+              // label: Text('2'),
               child: Icon(Icons.messenger_outlined),
             ),
             selectedIcon: Icon(Icons.messenger),
-            label: 'Reports',
+            label: AppLocalizations.of(context)!.mainRequestsTitle,
           ),
         ],
       ),
       body: SafeArea(
         child: IndexedStack(
+          sizing: StackFit.loose,
           index: _pageIndex,
           children: <Widget>[
             Home(),
             WorldMap(),
             RescueMe(),
-            Placeholder(),
+            RequestsScreen(),
           ],
         ),
       ),

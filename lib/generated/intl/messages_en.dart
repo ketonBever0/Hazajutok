@@ -58,6 +58,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("My Account"),
         "mainDrawerRegistration":
             MessageLookupByLibrary.simpleMessage("Registration"),
+        "mainHomeTitle": MessageLookupByLibrary.simpleMessage("Home"),
+        "mainMapTitle": MessageLookupByLibrary.simpleMessage("Map"),
+        "mainRequestsTitle": MessageLookupByLibrary.simpleMessage("Requests"),
         "mainRescueMeDetails":
             MessageLookupByLibrary.simpleMessage("Please provide some details"),
         "mainRescueMeDetailsMissing":

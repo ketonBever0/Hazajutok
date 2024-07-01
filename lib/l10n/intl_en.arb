@@ -2,6 +2,10 @@
   "@@locale": "en",
   "language": "English",
   "mainTitle": "Car rescue",
+  "mainHomeTitle": "Home",
+  "mainMapTitle": "Map",
+  "mainRequestsTitle": "Requests",
+
   "mainDrawerRegistration": "Registration",
   "mainDrawerLogin": "Login",
 

@@ -70,6 +70,36 @@ class S {
     );
   }
 
+  /// `Home`
+  String get mainHomeTitle {
+    return Intl.message(
+      'Home',
+      name: 'mainHomeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Map`
+  String get mainMapTitle {
+    return Intl.message(
+      'Map',
+      name: 'mainMapTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Requests`
+  String get mainRequestsTitle {
+    return Intl.message(
+      'Requests',
+      name: 'mainRequestsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Registration`
   String get mainDrawerRegistration {
     return Intl.message(

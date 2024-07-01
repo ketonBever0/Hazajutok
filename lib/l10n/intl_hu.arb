@@ -2,11 +2,15 @@
   "@@locale": "hu",
   "language": "Magyar",
   "mainTitle": "Járműmentés",
-  "mainDrawerRegistration": "Registration",
-  "mainDrawerLogin": "Login",
+  "mainHomeTitle": "Főoldal",
+  "mainMapTitle": "Térkép",
+  "mainRequestsTitle": "Jelentések",
 
-  "mainDrawerMyAccount": "My Account",
-  "mainDrawerLogOut": "Log out",
+  "mainDrawerRegistration": "Regisztráció",
+  "mainDrawerLogin": "Bejelentkezés",
+
+  "mainDrawerMyAccount": "Fiók",
+  "mainDrawerLogOut": "Kijelentkezés",
 
   "authFullname": "Username",
   "authEmail": "E-mail",
