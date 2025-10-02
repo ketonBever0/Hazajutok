@@ -1,6 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
+import 'package:hazajutok/l10n/app_localizations.dart';
 part 'registration_form.freezed.dart';
 
 part 'registration_form.g.dart';

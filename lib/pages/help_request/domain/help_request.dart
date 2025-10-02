@@ -16,7 +16,7 @@ class HelpRequest with _$HelpRequest {
       required LatLng where,
       required bool? isStored,
       required String? model,
-      required User user,
+      required User? user,
       required String fullname,
       required String? email,
       required String vehicleType,

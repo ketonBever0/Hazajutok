@@ -9,7 +9,7 @@ import 'package:hazajutok/pages/auth/registration/registration_screen.dart';
 import 'package:hazajutok/pages/main_screen.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'firebase_options.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:hazajutok/l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 Future<void> main() async {

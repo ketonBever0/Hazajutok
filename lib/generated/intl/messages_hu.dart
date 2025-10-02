@@ -22,71 +22,83 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "authEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
-        "authFullname": MessageLookupByLibrary.simpleMessage("Username"),
-        "authMissingConfirmPassword":
-            MessageLookupByLibrary.simpleMessage("Confirm password is missing"),
-        "authMissingEmail":
-            MessageLookupByLibrary.simpleMessage("E-mail is missing"),
-        "authMissingFullname":
-            MessageLookupByLibrary.simpleMessage("Username is missing"),
-        "authMissingMobileNumber":
-            MessageLookupByLibrary.simpleMessage("Mobile number is missing"),
-        "authMissingPassword":
-            MessageLookupByLibrary.simpleMessage("Password is missing"),
-        "authMobileNumber": MessageLookupByLibrary.simpleMessage("Mobile"),
-        "authPassword": MessageLookupByLibrary.simpleMessage("Password"),
-        "authPasswordAgain":
-            MessageLookupByLibrary.simpleMessage("Password again"),
-        "authPasswordAndConfirmPasswordNotMatching":
-            MessageLookupByLibrary.simpleMessage(
-                "Password and Confirm password must be equal"),
-        "confirmLogOut": MessageLookupByLibrary.simpleMessage("Logout?"),
-        "language": MessageLookupByLibrary.simpleMessage("Magyar"),
-        "loginErrorInvalidCredentials":
-            MessageLookupByLibrary.simpleMessage("Invalid credentials."),
-        "loginErrorNoUser":
-            MessageLookupByLibrary.simpleMessage("Provided user not exists."),
-        "loginErrorUnknown":
-            MessageLookupByLibrary.simpleMessage("Unknown error."),
-        "loginErrorWrongPassword":
-            MessageLookupByLibrary.simpleMessage("Provided password is wrong."),
-        "loginSuccess": MessageLookupByLibrary.simpleMessage("Welcome back!"),
-        "mainDrawerLogOut":
-            MessageLookupByLibrary.simpleMessage("Kijelentkezés"),
-        "mainDrawerLogin":
-            MessageLookupByLibrary.simpleMessage("Bejelentkezés"),
-        "mainDrawerMyAccount": MessageLookupByLibrary.simpleMessage("Fiók"),
-        "mainDrawerRegistration":
-            MessageLookupByLibrary.simpleMessage("Regisztráció"),
-        "mainHomeTitle": MessageLookupByLibrary.simpleMessage("Főoldal"),
-        "mainMapTitle": MessageLookupByLibrary.simpleMessage("Térkép"),
-        "mainRequestsTitle": MessageLookupByLibrary.simpleMessage("Jelentések"),
-        "mainRescueMeDetails":
-            MessageLookupByLibrary.simpleMessage("Please provide some details"),
-        "mainRescueMeDetailsMissing":
-            MessageLookupByLibrary.simpleMessage("Details not provided"),
-        "mainRescueMeFullname":
-            MessageLookupByLibrary.simpleMessage("Your Name"),
-        "mainRescueMeFullnameError":
-            MessageLookupByLibrary.simpleMessage("Name is missing"),
-        "mainRescueMeMobile":
-            MessageLookupByLibrary.simpleMessage("Mobile number"),
-        "mainRescueMeMobileError":
-            MessageLookupByLibrary.simpleMessage("Mobile number is missing"),
-        "mainRescueMeRequestHelp":
-            MessageLookupByLibrary.simpleMessage("Send Request!"),
-        "mainRescueMeType": MessageLookupByLibrary.simpleMessage(""),
-        "mainRescueMeTypeBus": MessageLookupByLibrary.simpleMessage("Bus"),
-        "mainRescueMeTypeCar": MessageLookupByLibrary.simpleMessage("Car"),
-        "mainRescueMeTypeMotorCycle":
-            MessageLookupByLibrary.simpleMessage("Motorcycle"),
-        "mainRescueMeTypeOther": MessageLookupByLibrary.simpleMessage("Other"),
-        "mainRescueMeTypeTruck": MessageLookupByLibrary.simpleMessage("Truck"),
-        "mainTitle": MessageLookupByLibrary.simpleMessage("Járműmentés"),
-        "registrationFailed":
-            MessageLookupByLibrary.simpleMessage("Registration failed."),
-        "registrationSuccesful":
-            MessageLookupByLibrary.simpleMessage("Registered as")
-      };
+    "authEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+    "authFullname": MessageLookupByLibrary.simpleMessage("Username"),
+    "authMissingConfirmPassword": MessageLookupByLibrary.simpleMessage(
+      "Confirm password is missing",
+    ),
+    "authMissingEmail": MessageLookupByLibrary.simpleMessage(
+      "E-mail is missing",
+    ),
+    "authMissingFullname": MessageLookupByLibrary.simpleMessage(
+      "Username is missing",
+    ),
+    "authMissingMobileNumber": MessageLookupByLibrary.simpleMessage(
+      "Mobile number is missing",
+    ),
+    "authMissingPassword": MessageLookupByLibrary.simpleMessage(
+      "Password is missing",
+    ),
+    "authMobileNumber": MessageLookupByLibrary.simpleMessage("Mobile"),
+    "authPassword": MessageLookupByLibrary.simpleMessage("Password"),
+    "authPasswordAgain": MessageLookupByLibrary.simpleMessage("Password again"),
+    "authPasswordAndConfirmPasswordNotMatching":
+        MessageLookupByLibrary.simpleMessage(
+          "Password and Confirm password must be equal",
+        ),
+    "confirmLogOut": MessageLookupByLibrary.simpleMessage("Logout?"),
+    "language": MessageLookupByLibrary.simpleMessage("Magyar"),
+    "loginErrorInvalidCredentials": MessageLookupByLibrary.simpleMessage(
+      "Invalid credentials.",
+    ),
+    "loginErrorNoUser": MessageLookupByLibrary.simpleMessage(
+      "Provided user not exists.",
+    ),
+    "loginErrorUnknown": MessageLookupByLibrary.simpleMessage("Unknown error."),
+    "loginErrorWrongPassword": MessageLookupByLibrary.simpleMessage(
+      "Provided password is wrong.",
+    ),
+    "loginSuccess": MessageLookupByLibrary.simpleMessage("Welcome back!"),
+    "mainDrawerLogOut": MessageLookupByLibrary.simpleMessage("Kijelentkezés"),
+    "mainDrawerLogin": MessageLookupByLibrary.simpleMessage("Bejelentkezés"),
+    "mainDrawerMyAccount": MessageLookupByLibrary.simpleMessage("Fiók"),
+    "mainDrawerRegistration": MessageLookupByLibrary.simpleMessage(
+      "Regisztráció",
+    ),
+    "mainHomeTitle": MessageLookupByLibrary.simpleMessage("Főoldal"),
+    "mainMapTitle": MessageLookupByLibrary.simpleMessage("Térkép"),
+    "mainRequestsTitle": MessageLookupByLibrary.simpleMessage("Jelentések"),
+    "mainRescueMeDetails": MessageLookupByLibrary.simpleMessage(
+      "Please provide some details",
+    ),
+    "mainRescueMeDetailsMissing": MessageLookupByLibrary.simpleMessage(
+      "Details not provided",
+    ),
+    "mainRescueMeFullname": MessageLookupByLibrary.simpleMessage("Your Name"),
+    "mainRescueMeFullnameError": MessageLookupByLibrary.simpleMessage(
+      "Name is missing",
+    ),
+    "mainRescueMeMobile": MessageLookupByLibrary.simpleMessage("Mobile number"),
+    "mainRescueMeMobileError": MessageLookupByLibrary.simpleMessage(
+      "Mobile number is missing",
+    ),
+    "mainRescueMeRequestHelp": MessageLookupByLibrary.simpleMessage(
+      "Send Request!",
+    ),
+    "mainRescueMeType": MessageLookupByLibrary.simpleMessage(""),
+    "mainRescueMeTypeBus": MessageLookupByLibrary.simpleMessage("Bus"),
+    "mainRescueMeTypeCar": MessageLookupByLibrary.simpleMessage("Car"),
+    "mainRescueMeTypeMotorCycle": MessageLookupByLibrary.simpleMessage(
+      "Motorcycle",
+    ),
+    "mainRescueMeTypeOther": MessageLookupByLibrary.simpleMessage("Other"),
+    "mainRescueMeTypeTruck": MessageLookupByLibrary.simpleMessage("Truck"),
+    "mainTitle": MessageLookupByLibrary.simpleMessage("Járműmentés"),
+    "registrationFailed": MessageLookupByLibrary.simpleMessage(
+      "Registration failed.",
+    ),
+    "registrationSuccesful": MessageLookupByLibrary.simpleMessage(
+      "Registered as",
+    ),
+  };
 }

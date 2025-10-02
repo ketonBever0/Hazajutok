@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$RescueMeForm {
-  LatLng? get where => throw _privateConstructorUsedError;
+  LatLng get where => throw _privateConstructorUsedError;
   bool get isLoggedIn => throw _privateConstructorUsedError;
   String get fullname => throw _privateConstructorUsedError;
   bool get fullnameInit => throw _privateConstructorUsedError;
@@ -38,7 +38,7 @@ abstract class $RescueMeFormCopyWith<$Res> {
       _$RescueMeFormCopyWithImpl<$Res, RescueMeForm>;
   @useResult
   $Res call(
-      {LatLng? where,
+      {LatLng where,
       bool isLoggedIn,
       String fullname,
       bool fullnameInit,
@@ -62,7 +62,7 @@ class _$RescueMeFormCopyWithImpl<$Res, $Val extends RescueMeForm>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? where = freezed,
+    Object? where = null,
     Object? isLoggedIn = null,
     Object? fullname = null,
     Object? fullnameInit = null,
@@ -73,10 +73,10 @@ class _$RescueMeFormCopyWithImpl<$Res, $Val extends RescueMeForm>
     Object? detailsInit = null,
   }) {
     return _then(_value.copyWith(
-      where: freezed == where
+      where: null == where
           ? _value.where
           : where // ignore: cast_nullable_to_non_nullable
-              as LatLng?,
+              as LatLng,
       isLoggedIn: null == isLoggedIn
           ? _value.isLoggedIn
           : isLoggedIn // ignore: cast_nullable_to_non_nullable
@@ -122,7 +122,7 @@ abstract class _$$$RescueMeFormImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {LatLng? where,
+      {LatLng where,
       bool isLoggedIn,
       String fullname,
       bool fullnameInit,
@@ -144,7 +144,7 @@ class __$$$RescueMeFormImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? where = freezed,
+    Object? where = null,
     Object? isLoggedIn = null,
     Object? fullname = null,
     Object? fullnameInit = null,
@@ -155,10 +155,10 @@ class __$$$RescueMeFormImplCopyWithImpl<$Res>
     Object? detailsInit = null,
   }) {
     return _then(_$$RescueMeFormImpl(
-      where: freezed == where
+      where: null == where
           ? _value.where
           : where // ignore: cast_nullable_to_non_nullable
-              as LatLng?,
+              as LatLng,
       isLoggedIn: null == isLoggedIn
           ? _value.isLoggedIn
           : isLoggedIn // ignore: cast_nullable_to_non_nullable
@@ -211,7 +211,7 @@ class _$$RescueMeFormImpl extends $RescueMeForm {
       : super._();
 
   @override
-  final LatLng? where;
+  final LatLng where;
   @override
   final bool isLoggedIn;
   @override
@@ -268,7 +268,7 @@ class _$$RescueMeFormImpl extends $RescueMeForm {
 
 abstract class $RescueMeForm extends RescueMeForm {
   const factory $RescueMeForm(
-      {required final LatLng? where,
+      {required final LatLng where,
       required final bool isLoggedIn,
       required final String fullname,
       required final bool fullnameInit,
@@ -280,7 +280,7 @@ abstract class $RescueMeForm extends RescueMeForm {
   const $RescueMeForm._() : super._();
 
   @override
-  LatLng? get where;
+  LatLng get where;
   @override
   bool get isLoggedIn;
   @override

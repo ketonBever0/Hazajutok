@@ -22,6 +22,7 @@ mixin _$HelpRequest {
   LatLng get where => throw _privateConstructorUsedError;
   bool? get isStored => throw _privateConstructorUsedError;
   String? get model => throw _privateConstructorUsedError;
+  User? get user => throw _privateConstructorUsedError;
   String get fullname => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
   String get vehicleType => throw _privateConstructorUsedError;
@@ -50,6 +51,7 @@ abstract class $HelpRequestCopyWith<$Res> {
       LatLng where,
       bool? isStored,
       String? model,
+      User? user,
       String fullname,
       String? email,
       String vehicleType,
@@ -80,6 +82,7 @@ class _$HelpRequestCopyWithImpl<$Res, $Val extends HelpRequest>
     Object? where = null,
     Object? isStored = freezed,
     Object? model = freezed,
+    Object? user = freezed,
     Object? fullname = null,
     Object? email = freezed,
     Object? vehicleType = null,
@@ -115,6 +118,10 @@ class _$HelpRequestCopyWithImpl<$Res, $Val extends HelpRequest>
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
               as String?,
+      user: freezed == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User?,
       fullname: null == fullname
           ? _value.fullname
           : fullname // ignore: cast_nullable_to_non_nullable
@@ -170,6 +177,7 @@ abstract class _$$$HelpRequestImplCopyWith<$Res>
       LatLng where,
       bool? isStored,
       String? model,
+      User? user,
       String fullname,
       String? email,
       String vehicleType,
@@ -198,6 +206,7 @@ class __$$$HelpRequestImplCopyWithImpl<$Res>
     Object? where = null,
     Object? isStored = freezed,
     Object? model = freezed,
+    Object? user = freezed,
     Object? fullname = null,
     Object? email = freezed,
     Object? vehicleType = null,
@@ -233,6 +242,10 @@ class __$$$HelpRequestImplCopyWithImpl<$Res>
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
               as String?,
+      user: freezed == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User?,
       fullname: null == fullname
           ? _value.fullname
           : fullname // ignore: cast_nullable_to_non_nullable
@@ -283,6 +296,7 @@ class _$$HelpRequestImpl extends $HelpRequest {
       required this.where,
       required this.isStored,
       required this.model,
+      required this.user,
       required this.fullname,
       required this.email,
       required this.vehicleType,
@@ -307,6 +321,8 @@ class _$$HelpRequestImpl extends $HelpRequest {
   @override
   final String? model;
   @override
+  final User? user;
+  @override
   final String fullname;
   @override
   final String? email;
@@ -327,7 +343,7 @@ class _$$HelpRequestImpl extends $HelpRequest {
 
   @override
   String toString() {
-    return 'HelpRequest(uid: $uid, startDate: $startDate, endDate: $endDate, where: $where, isStored: $isStored, model: $model, fullname: $fullname, email: $email, vehicleType: $vehicleType, details: $details, licensePlate: $licensePlate, countryCode: $countryCode, kmsFromDepartment: $kmsFromDepartment, kmsDelivered: $kmsDelivered, cost: $cost)';
+    return 'HelpRequest(uid: $uid, startDate: $startDate, endDate: $endDate, where: $where, isStored: $isStored, model: $model, user: $user, fullname: $fullname, email: $email, vehicleType: $vehicleType, details: $details, licensePlate: $licensePlate, countryCode: $countryCode, kmsFromDepartment: $kmsFromDepartment, kmsDelivered: $kmsDelivered, cost: $cost)';
   }
 
   @override
@@ -343,6 +359,7 @@ class _$$HelpRequestImpl extends $HelpRequest {
             (identical(other.isStored, isStored) ||
                 other.isStored == isStored) &&
             (identical(other.model, model) || other.model == model) &&
+            (identical(other.user, user) || other.user == user) &&
             (identical(other.fullname, fullname) ||
                 other.fullname == fullname) &&
             (identical(other.email, email) || other.email == email) &&
@@ -369,6 +386,7 @@ class _$$HelpRequestImpl extends $HelpRequest {
       where,
       isStored,
       model,
+      user,
       fullname,
       email,
       vehicleType,
@@ -394,6 +412,7 @@ abstract class $HelpRequest extends HelpRequest {
       required final LatLng where,
       required final bool? isStored,
       required final String? model,
+      required final User? user,
       required final String fullname,
       required final String? email,
       required final String vehicleType,
@@ -417,6 +436,8 @@ abstract class $HelpRequest extends HelpRequest {
   bool? get isStored;
   @override
   String? get model;
+  @override
+  User? get user;
   @override
   String get fullname;
   @override

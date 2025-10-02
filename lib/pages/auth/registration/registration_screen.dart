@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hazajutok/l10n/app_localizations.dart';import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hazajutok/pages/auth/registration/application/registration_controller.dart';
 import 'package:hazajutok/pages/auth/registration/domain/registration_form.dart';
 

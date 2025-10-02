@@ -50,6 +50,6 @@ class FirebaseRescueMeRepository extends RescueMeRepository {
         countryCode: data["countryCode"],
         kmsFromDepartment: data["kmsFromDepartment"],
         kmsDelivered: data["kmsDelivered"],
-        cost: data["cost"]);
+        cost: data["cost"], user: null);
   }
 }

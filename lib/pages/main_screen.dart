@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hazajutok/pages/mainscreen/consumer_drawer.dart';
 import 'package:hazajutok/pages/mainscreen/home.dart';
 import 'package:hazajutok/pages/mainscreen/map.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:hazajutok/l10n/app_localizations.dart';
 import 'package:hazajutok/pages/mainscreen/requests/presentation/requests_screen.dart';
 import 'package:hazajutok/pages/mainscreen/rescue_me/presentation/rescue_me.dart';
 

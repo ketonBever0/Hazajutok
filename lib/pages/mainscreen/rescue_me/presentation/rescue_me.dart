@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:collection';
 import 'dart:io';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:hazajutok/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

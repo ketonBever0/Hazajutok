@@ -20,7 +20,7 @@ class RescueMeController extends Notifier<RescueMeForm> {
   }
 
   void changePosition(LatLng? value) {
-    state = state.copyWith(where: value);
+    if(value != null) state = state.copyWith(where: value);
   }
 
   void changeIsLoggedIn(bool value) {

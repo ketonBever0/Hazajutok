@@ -18,8 +18,10 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(_current != null,
-        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
+    assert(
+      _current != null,
+      'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.',
+    );
     return _current!;
   }
 
@@ -41,8 +43,10 @@ class S {
 
   static S of(BuildContext context) {
     final instance = S.maybeOf(context);
-    assert(instance != null,
-        'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
+    assert(
+      instance != null,
+      'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?',
+    );
     return instance!;
   }
 
@@ -52,42 +56,22 @@ class S {
 
   /// `English`
   String get language {
-    return Intl.message(
-      'English',
-      name: 'language',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('English', name: 'language', desc: '', args: []);
   }
 
   /// `Car rescue`
   String get mainTitle {
-    return Intl.message(
-      'Car rescue',
-      name: 'mainTitle',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Car rescue', name: 'mainTitle', desc: '', args: []);
   }
 
   /// `Home`
   String get mainHomeTitle {
-    return Intl.message(
-      'Home',
-      name: 'mainHomeTitle',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Home', name: 'mainHomeTitle', desc: '', args: []);
   }
 
   /// `Map`
   String get mainMapTitle {
-    return Intl.message(
-      'Map',
-      name: 'mainMapTitle',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Map', name: 'mainMapTitle', desc: '', args: []);
   }
 
   /// `Requests`
@@ -112,12 +96,7 @@ class S {
 
   /// `Login`
   String get mainDrawerLogin {
-    return Intl.message(
-      'Login',
-      name: 'mainDrawerLogin',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Login', name: 'mainDrawerLogin', desc: '', args: []);
   }
 
   /// `My Account`
@@ -142,32 +121,17 @@ class S {
 
   /// `Username`
   String get authFullname {
-    return Intl.message(
-      'Username',
-      name: 'authFullname',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Username', name: 'authFullname', desc: '', args: []);
   }
 
   /// `E-mail`
   String get authEmail {
-    return Intl.message(
-      'E-mail',
-      name: 'authEmail',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('E-mail', name: 'authEmail', desc: '', args: []);
   }
 
   /// `Password`
   String get authPassword {
-    return Intl.message(
-      'Password',
-      name: 'authPassword',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Password', name: 'authPassword', desc: '', args: []);
   }
 
   /// `Password again`
@@ -182,12 +146,7 @@ class S {
 
   /// `Mobile`
   String get authMobileNumber {
-    return Intl.message(
-      'Mobile',
-      name: 'authMobileNumber',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Mobile', name: 'authMobileNumber', desc: '', args: []);
   }
 
   /// `Username is missing`
@@ -322,12 +281,7 @@ class S {
 
   /// `Logout?`
   String get confirmLogOut {
-    return Intl.message(
-      'Logout?',
-      name: 'confirmLogOut',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Logout?', name: 'confirmLogOut', desc: '', args: []);
   }
 
   /// `Your Name`
@@ -372,12 +326,7 @@ class S {
 
   /// ``
   String get mainRescueMeType {
-    return Intl.message(
-      '',
-      name: 'mainRescueMeType',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('', name: 'mainRescueMeType', desc: '', args: []);
   }
 
   /// `Motorcycle`
@@ -392,22 +341,12 @@ class S {
 
   /// `Car`
   String get mainRescueMeTypeCar {
-    return Intl.message(
-      'Car',
-      name: 'mainRescueMeTypeCar',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Car', name: 'mainRescueMeTypeCar', desc: '', args: []);
   }
 
   /// `Bus`
   String get mainRescueMeTypeBus {
-    return Intl.message(
-      'Bus',
-      name: 'mainRescueMeTypeBus',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Bus', name: 'mainRescueMeTypeBus', desc: '', args: []);
   }
 
   /// `Truck`
